@@ -1,0 +1,27 @@
+.job-item{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: space-between;
+  width: 100%;
+  border-top: .5px solid gray;
+  padding: 4px;
+}
+#job-title{
+  cursor: pointer;
+}
+
+.job-info{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.job-update-details{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: start;
+  font-style: italic;
+  font-size: 12px;
+}

@@ -1,0 +1,63 @@
+.nav-bar{
+display: flex; 
+width: 80%;
+height: 60px;
+align-items: end;
+padding: 8px;
+margin: 0 auto;
+justify-content: space-between;
+}
+
+.nav-items{
+  display: flex;
+  width: 100%;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.nav-items-left{
+  display: flex;
+  gap: 4px; 
+  align-items: end;
+  justify-content: center;
+}
+
+#home{
+  width: 25px;
+  height: 25px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  align-items: end;
+}
+
+.sort-block{
+  display: flex;
+  gap: 4px;
+}
+
+.sort-links{
+  display: flex;
+  gap: 8px;
+}
+
+#add-job-btn{
+  background-color: aqua;
+  border: none;
+  border-radius: 8px;
+  width: 48px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.search-bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.search-bar input{
+  height: 29px;
+}

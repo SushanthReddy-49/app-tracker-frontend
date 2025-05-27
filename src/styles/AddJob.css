@@ -1,0 +1,56 @@
+.form-bg {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.job-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 24px;
+  border-radius: 12px; /* Slightly more rounded corners */
+  gap: 16px; /* Add consistent spacing between all children */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Add spacing between label and input */
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="checkbox"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto; /* Ensure checkbox doesn't stretch */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right */
+}
+
+.job-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px;
+}
+
+.job-form button:hover {
+  background-color: #0056b3;
+}

@@ -21,7 +21,7 @@ jobs:
         run: docker build -t app-tracker-fronend .
       
       - name: Push Docker image
-        run: docker push app-tracker-frontend:latest
+        run: docker push app-tracker-fronend:latest
 
 
   deploy:
@@ -37,4 +37,4 @@ jobs:
           docker rm app-tracker-fronend || true
       
       - name: Run new container
-        run: docker run -d --name app-tracker-fronend -p 3000:3000 app-tracker-frontend:latest -e='${{ secrets.MONGO_PASSWORD }}'
+        run: docker run -d --name app-tracker-fronend -p 3000:3000 app-tracker-fronend:latest -e='${{ secrets.MONGO_PASSWORD }}'

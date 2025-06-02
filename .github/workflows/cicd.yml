@@ -37,4 +37,4 @@ jobs:
           docker rm app-tracker-fronend || true
       
       - name: Run new container
-        run: docker run -d --name app-tracker-fronend -p 3000:3000 sushanthreddysingireddy/app-tracker-fronend:latest -e='${{ secrets.MONGO_PASSWORD }}'
+        run: docker run -d --name app-tracker-fronend -p 3000:3000 sushanthreddysingireddy/app-tracker-fronend:latest

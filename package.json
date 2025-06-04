@@ -12,7 +12,9 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "7.6.2"
+    "react-router-dom": "7.6.2",
+    "react-icons/bi": "^4.6.0",
+    "react-icons/fi": "^4.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

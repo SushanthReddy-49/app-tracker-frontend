@@ -1,6 +1,6 @@
 export async function getJobs() {
   try {
-    const response = await fetch("http://localhost:3000/api/jobs");
+    const response = await fetch("http://localhost:4000/api/jobs");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }

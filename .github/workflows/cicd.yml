@@ -18,8 +18,8 @@ jobs:
         run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
       
       - name: Build Docker image
-        run: docker build -t sushanthreddysingireddy/app-tracker-fronend .
-      
+        run: docker build --build-arg VITE_API_URI=${{ secrets.VITE_API_URI }} -t sushanthreddysingireddy/app-tracker-fronend .
+
       - name: Push Docker image
         run: docker push sushanthreddysingireddy/app-tracker-fronend:latest
 
@@ -37,4 +37,4 @@ jobs:
           docker rm app-tracker-fronend || true
       
       - name: Run new container
-        run: docker run -d --name app-tracker-fronend -p 3000:3000 -e VITE_API_URI=${{ secrets.VITE_API_URI }} sushanthreddysingireddy/app-tracker-fronend:latest
+        run: docker run -d --name app-tracker-fronend -p 3000:3000 sushanthreddysingireddy/app-tracker-fronend:latest

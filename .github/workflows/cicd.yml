@@ -37,4 +37,4 @@ jobs:
           docker rm app-tracker-fronend || true
       
       - name: Run new container
-        run: docker run -d --name app-tracker-fronend -p 3000:3000 -e VITE_API_URL=${{secrets.VITE_API_URI}} sushanthreddysingireddy/app-tracker-fronend:latest
+        run: docker run -d --name app-tracker-fronend -p 3000:3000 -e VITE_API_URL='${{secrets.VITE_API_URI}}' sushanthreddysingireddy/app-tracker-fronend:latest

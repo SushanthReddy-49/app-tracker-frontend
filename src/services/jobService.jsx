@@ -1,6 +1,6 @@
 export async function getJobs() {
   try {
-    const response = await fetch("http://app-tracker-backend:4000/api/jobs");
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/jobs`);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }

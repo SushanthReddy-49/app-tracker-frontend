@@ -8,7 +8,7 @@ function JobItem({ job }) {
   const updateStaus = async (e) => {
     const updatedJob = { ...job, jobCurrentStatus: e.target.value };
     try {
-      const response = await fetch(`http://localhost:3000/api/jobs/${job._id}`, {
+      const response = await fetch(`http://${import.meta.env.VITE_API_URI}/api/jobs/${job._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedJob),

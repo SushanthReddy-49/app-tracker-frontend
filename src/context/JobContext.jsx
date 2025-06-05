@@ -19,7 +19,7 @@ function JobProvider({children}){
   
   async function postJob(job){
   try{
-    const response = await fetch(`http://${import.meta.env.VITE_API_URL}/api/jobs`, {
+    const response = await fetch(`http://${import.meta.env.VITE_API_URI}/api/jobs`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(job),

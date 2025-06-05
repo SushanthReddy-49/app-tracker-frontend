@@ -30,11 +30,14 @@ jobs:
     steps:
       - name: Pull Docker image
         run: docker pull sushanthreddysingireddy/app-tracker-fronend:latest
-      
+        
+      - name: Create Docker network
+        run: docker network create app-tracker-network || true
+        
       - name: Stop and remove existing container
         run: |
           docker stop app-tracker-fronend || true
           docker rm app-tracker-fronend || true
       
       - name: Run new container
-        run: docker run -d --name app-tracker-fronend -p 3000:3000 sushanthreddysingireddy/app-tracker-fronend:latest
+        run: docker run -d --name app-tracker-fronend -p 3000:3000 --network app-tracker-network sushanthreddysingireddy/app-tracker-fronend:latest

@@ -37,6 +37,23 @@ function JobProvider({children}){
   }
 }
 
+ async function deleteJob(id) {
+  try {
+    const response = await fetch(`http://${import.meta.env.VITE_API_URI}/api/jobs/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    fetchJobs(); // Refresh the job list after deletion
+    return await response.json();
+  } catch (error) {
+    console.error("Error deleting job:", error);
+    throw error;
+  }
+}
+
   useEffect(() => {
     fetchJobs();
   }, []);
@@ -45,7 +62,8 @@ function JobProvider({children}){
     jobs,
     setJobs,
     allJobs,
-    postJob
+    postJob,
+    deleteJob
   }
 
   return (

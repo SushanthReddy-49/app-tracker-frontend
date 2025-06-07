@@ -11,6 +11,23 @@
   cursor: pointer;
 }
 
+.job-title-container{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-icon, 
+.delete-icon{
+  display: none;
+}
+
+.job-item:hover .edit-icon,
+.job-item:hover .delete-icon{
+  display: inline-block;
+}
+
 .job-info{
   display: flex;
   align-items: start;
